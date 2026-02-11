@@ -7,8 +7,8 @@ from sqlalchemy import create_engine, text
 st.set_page_config(page_title="Equity Curve", layout="wide")
 st.title("📈 Equity Curve (Sem vs Com Sentimento)")
 
-ENGINE_URL = "postgresql://marketpulse:marketpulse@localhost:5432/marketpulse"
-engine = create_engine(ENGINE_URL)
+from app.db import get_engine
+engine = get_engine()
 
 BASE_MODEL = "LR_TECH_V1"
 SENT_MODEL = "LR_TECH_SENT_V2"
