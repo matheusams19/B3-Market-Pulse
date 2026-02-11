@@ -6,7 +6,8 @@ from sqlalchemy import create_engine
 st.set_page_config(page_title="Modelo ML", layout="wide")
 st.title("🤖 Modelo ML — Resultados & Equity")
 
-engine = create_engine("postgresql://marketpulse:marketpulse@localhost:5432/marketpulse")
+from app.db import get_engine
+engine = get_engine()
 
 @st.cache_data(ttl=60)
 def load_models():
