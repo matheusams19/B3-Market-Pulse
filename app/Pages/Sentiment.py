@@ -6,7 +6,8 @@ from sqlalchemy import create_engine
 st.set_page_config(page_title="Sentimento de Mercado", layout="wide")
 st.title("🧠 Sentimento de Mercado (NLP)")
 
-engine = create_engine("postgresql://marketpulse:marketpulse@localhost:5432/marketpulse")
+from app.db import get_engine
+engine = get_engine()
 
 @st.cache_data(ttl=60)
 def load_tickers():
