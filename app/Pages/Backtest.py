@@ -6,7 +6,8 @@ from sqlalchemy import create_engine
 st.set_page_config(page_title="Backtest", layout="wide")
 st.title("📈 Backtest — Estratégia MA20 > MA50")
 
-engine = create_engine("postgresql://marketpulse:marketpulse@localhost:5432/marketpulse")
+from app.db import get_engine
+engine = get_engine()
 
 @st.cache_data(ttl=60)
 def load_results():
