@@ -6,7 +6,12 @@ from sqlalchemy import create_engine
 st.set_page_config(page_title="B3 MarketPulse", layout="wide")
 st.title("📊 B3 MarketPulse")
 
-engine = create_engine("postgresql://marketpulse:marketpulse@localhost:5432/marketpulse")
+DATABASE_URL = st.secrets["DATABASE_URL"]
+
+engine = create_engine(
+    DATABASE_URL,
+    pool_pre_ping=True
+)
 
 @st.cache_data(ttl=60)
 def get_tickers():
