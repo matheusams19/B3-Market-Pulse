@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from sqlalchemy import create_engine
+from interface import criar_menu
+criar_menu()
 
 st.set_page_config(page_title="Modelo ML", layout="wide")
 st.title("🤖 Modelo ML — Resultados & Equity")
