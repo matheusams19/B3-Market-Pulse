@@ -51,3 +51,16 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+
+# No arquivo Home.py
+st.sidebar.title("Índice do Projeto")
+pagina_selecionada = st.sidebar.selectbox(
+    "Selecione a análise que deseja ver:",
+    ["Home", "Backtest", "Model", "Sentiment"]
+)
+
+if pagina_selecionada == "Home":
+    st.write("Bem-vindo ao Dashboard!")
+elif pagina_selecionada == "Backtest":
+    # Aqui você chamaria o código do seu arquivo de Backtest
+    st.write("Exibindo métricas de Backtest...")
