@@ -53,11 +53,12 @@ st.markdown(
 )
 
 
-# 1. Configuração da Barra Lateral
-st.sidebar.title("📌 Índice do Projeto")
-st.sidebar.markdown("Selecione a página que deseja analisar:")
+import streamlit as st
 
-# 2. Links para os arquivos na raiz
+# Configuração da Sidebar
+st.sidebar.title("📌 Índice do Projeto")
+
+# Botões de Navegação
 if st.sidebar.button("🏠 Home"):
     st.switch_page("Home.py")
 
@@ -65,24 +66,15 @@ if st.sidebar.button("🗄️ Database"):
     st.switch_page("db.py")
 
 st.sidebar.markdown("---")
-st.sidebar.subheader("Análises (Pages)")
+st.sidebar.subheader("Análises")
 
-# 3. Links para os arquivos dentro da pasta 'pages'
-# O caminho deve seguir exatamente a estrutura da sua imagem
 if st.sidebar.button("📊 Backtest"):
     st.switch_page("pages/Backtest.py")
 
 if st.sidebar.button("📈 Equity Curve"):
     st.switch_page("pages/Equity_Curve.py")
 
-if st.sidebar.button("🤖 Model"):
-    st.switch_page("pages/Model.py")
-
-if st.sidebar.button("⚖️ Model Compare"):
-    st.switch_page("pages/Model_Compare.py")
-
-if st.sidebar.button("💬 Sentiment Analysis"):
-    st.switch_page("pages/Sentiment.py")
-
-st.sidebar.markdown("---")
-st.sidebar.caption("Projeto de Mercado Financeiro v1.0")
+# Conteúdo EXCLUSIVO da Home
+st.title("Página Inicial - MarketPulse 🚀")
+st.write("Bem-vindo ao sistema de análise financeira.")
+# NÃO coloque códigos de backtest ou gráficos aqui se quiser que sejam páginas separadas.
