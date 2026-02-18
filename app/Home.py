@@ -53,12 +53,11 @@ st.markdown(
 )
 
 
-import streamlit as st
-
-# Configuração da Sidebar
+# 1. Configuração da Barra Lateral (Índice)
 st.sidebar.title("📌 Índice do Projeto")
+st.sidebar.markdown("Selecione a página que deseja analisar:")
 
-# Botões de Navegação
+# Botões de Navegação - Devem ser os únicos a usar st.switch_page
 if st.sidebar.button("🏠 Home"):
     st.switch_page("Home.py")
 
@@ -66,15 +65,30 @@ if st.sidebar.button("🗄️ Database"):
     st.switch_page("db.py")
 
 st.sidebar.markdown("---")
-st.sidebar.subheader("Análises")
+st.sidebar.subheader("Análises (Pages)")
 
+# Use os caminhos exatos que aparecem no seu repositório GitHub
 if st.sidebar.button("📊 Backtest"):
     st.switch_page("pages/Backtest.py")
 
 if st.sidebar.button("📈 Equity Curve"):
     st.switch_page("pages/Equity_Curve.py")
 
-# Conteúdo EXCLUSIVO da Home
-st.title("Página Inicial - MarketPulse 🚀")
-st.write("Bem-vindo ao sistema de análise financeira.")
-# NÃO coloque códigos de backtest ou gráficos aqui se quiser que sejam páginas separadas.
+if st.sidebar.button("🤖 Model"):
+    st.switch_page("pages/Model.py")
+
+if st.sidebar.button("⚖️ Model Compare"):
+    st.switch_page("pages/Model_Compare.py")
+
+if st.sidebar.button("💬 Sentiment Analysis"):
+    st.switch_page("pages/Sentiment.py")
+
+# 2. Conteúdo EXCLUSIVO da Home
+# Remova daqui qualquer código que pertença ao Backtest ou outros módulos
+st.title("MarketPulse - Dashboard Financeiro 🚀")
+st.write("Bem-vindo ao sistema. Utilize o menu lateral para acessar as métricas específicas.")
+
+# Exemplo de métricas gerais (opcional para a Home)
+col1, col2 = st.columns(2)
+col1.metric("Status do Sistema", "Online")
+col2.metric("Última Atualização", "2026-02-18")
