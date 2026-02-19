@@ -2,10 +2,12 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from sqlalchemy import create_engine
-import sys
-import os
-# Adiciona a pasta pai ao sys.path para encontrar o interface.py
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from pathlib import Path
+
+# Localiza a pasta 'app' (raiz do projeto no Streamlit Cloud)
+root_path = Path(__file__).resolve().parent.parent
+if str(root_path) not in sys.path:
+    sys.path.append(str(root_path))
 
 from interface import criar_menu
 criar_menu()
