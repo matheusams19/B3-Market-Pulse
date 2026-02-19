@@ -8,7 +8,7 @@ criar_menu()
 st.set_page_config(page_title="Backtest", layout="wide")
 st.title("📈 Backtest — Estratégia MA20 > MA50")
 
-from app.db import get_engine
+from db import get_engine
 engine = get_engine()
 
 @st.cache_data(ttl=60)
