@@ -8,7 +8,7 @@ criar_menu()
 st.set_page_config(page_title="Modelo ML", layout="wide")
 st.title("🤖 Modelo ML — Resultados & Equity")
 
-from app.db import get_engine
+from db import get_engine
 engine = get_engine()
 
 @st.cache_data(ttl=60)
