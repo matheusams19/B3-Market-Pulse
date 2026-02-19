@@ -8,8 +8,6 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from interface import criar_menu
-
-from interface import criar_menu
 criar_menu()
 
 st.set_page_config(page_title="Backtest", layout="wide")
