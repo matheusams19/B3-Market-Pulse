@@ -9,7 +9,7 @@ criar_menu()
 st.set_page_config(page_title="Equity Curve", layout="wide")
 st.title("📈 Equity Curve (Sem vs Com Sentimento)")
 
-from app.db import get_engine
+from db import get_engine
 engine = get_engine()
 
 BASE_MODEL = "LR_TECH_V1"
