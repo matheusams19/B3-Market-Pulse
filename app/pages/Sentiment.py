@@ -8,7 +8,7 @@ criar_menu()
 st.set_page_config(page_title="Sentimento de Mercado", layout="wide")
 st.title("🧠 Sentimento de Mercado (NLP)")
 
-from app.db import get_engine
+from db import get_engine
 engine = get_engine()
 
 @st.cache_data(ttl=60)
