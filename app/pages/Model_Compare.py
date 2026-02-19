@@ -3,8 +3,6 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from sqlalchemy import create_engine, text
-from interface import criar_menu
-criar_menu()
 
 st.set_page_config(page_title="Comparação de Modelos", layout="wide")
 st.title("📊 Comparação de Modelos (Sem vs Com Sentimento) — Camada GOLD")
