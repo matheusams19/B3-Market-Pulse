@@ -2,8 +2,11 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from sqlalchemy import create_engine
-
 from interface import criar_menu
+
+# Se precisar do banco de dados:
+from db import get_engine
+
 criar_menu()
 
 st.set_page_config(page_title="Backtest", layout="wide")
