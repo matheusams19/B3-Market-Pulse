@@ -2,6 +2,13 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from sqlalchemy import create_engine
+import sys
+import os
+# Adiciona a pasta pai ao sys.path para encontrar o interface.py
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from interface import criar_menu
+
 from interface import criar_menu
 criar_menu()
 
