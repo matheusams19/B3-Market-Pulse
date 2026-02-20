@@ -1,13 +1,14 @@
-📈 B3 MarketPulse
+## B3 MarketPulse
 
-## 🔗 Acesso Rápido
+🔗 Acesso Rápido
 O projeto está publicado e pode ser testado em tempo real através do link abaixo:
 
-[**➔ Abrir B3 MarketPulse no Streamlit Cloud**]([![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://b3-market-pulse.streamlit.app/))
+[**➔ Abrir B3 MarketPulse no [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://b3-market-pulse.streamlit.app/)]
 
 Pipeline end-to-end de Data Science e Machine Learning aplicado ao mercado acionário brasileiro (B3), integrando preços históricos, análise de sentimento de notícias via NLP, backtesting de estratégias quantitativas e visualização interativa em Streamlit, com arquitetura em camadas Bronze / Silver / Gold e banco PostgreSQL local e em cloud (Neon).
 
-🎯 Objetivo do Projeto
+
+## 🎯 Objetivo do Projeto
 
 Construir um pipeline end-to-end de dados e Machine Learning aplicado ao mercado acionário brasileiro (B3), cobrindo desde ingestão, processamento, modelagem, backtesting e visualização, com foco em tomada de decisão quantitativa baseada em dados.
 
@@ -45,7 +46,7 @@ O projeto não parte da premissa de que o sentimento melhora resultados, mas sim
 
 ---
 
-🧱 Arquitetura Geral (End-to-End)
+## 🧱 Arquitetura Geral (End-to-End)
 
 O projeto segue uma arquitetura moderna de Data Lakehouse segmentada em camadas. O fluxo se inicia na coleta de dados brutos (Bronze), passa pelo enriquecimento e processamento de NLP via modelos de linguagem (Silver) e culmina em uma camada semântica em SQL (Gold), otimizada para o consumo do dashboard Streamlit.
 
@@ -55,7 +56,7 @@ O projeto segue uma arquitetura moderna de Data Lakehouse segmentada em camadas.
 
 ---
 
-🧠 Modelagem e Machine Learning
+## 🧠 Modelagem e Machine Learning
 
 Modelos:
 
@@ -128,7 +129,7 @@ Cloud
 
 ---
 
-🧰 Stack Tecnológica
+## 🧰 Stack Tecnológica
 
 A stack tecnológica foi selecionada para suportar um pipeline end-to-end de alta performance. Utilizamos Transformers (via Hugging Face) para o processamento de linguagem natural das notícias e PyTorch para a base de modelagem, com persistência em PostgreSQL para garantir a integridade da arquitetura medalhão (Bronze/Silver/Gold).
 
@@ -138,7 +139,7 @@ A stack tecnológica foi selecionada para suportar um pipeline end-to-end de alt
 
 ---
 
-📂 Estrutura do Repositório
+## 📂 Estrutura do Repositório
 
 O projeto segue uma separação clara entre ingestão, transformação, modelagem, persistência e consumo analítico, adotando princípios de arquitetura de dados utilizados em ambientes produtivos.
 
@@ -226,7 +227,7 @@ b3-marketpulse/
 
 Análise de performance quantitativa consumindo a camada GOLD. O sistema ranqueia ativos por retorno acumulado e Sharpe Ratio.
 
-## 🧪 Validação da Hipótese
+🧪 Validação da Hipótese
 
 <p align="center">
   <img src="assets/modelo.png" width="800">
@@ -234,7 +235,7 @@ Análise de performance quantitativa consumindo a camada GOLD. O sistema ranquei
 
 Teste de hipótese: Comparativo entre o modelo base e o modelo enriquecido com sentimento. Notável geração de alfa no ativo WEGE3 ao utilizar dados de NLP.
 
-## 🧠 Inteligência de Mercado
+🧠 Inteligência de Mercado
 
 <p align="center">
   <img src="assets/compare.png" width="800">
@@ -242,7 +243,7 @@ Teste de hipótese: Comparativo entre o modelo base e o modelo enriquecido com s
 
 Mapa de Impacto: Visualização analítica que classifica os ativos onde o sentimento ajudou a reduzir o risco (drawdown) e aumentar a performance ajustada (Sharpe).
 
-🚀 Como Executar Localmente (Resumo)
+## 🚀 Como Executar Localmente (Resumo)
 
 Subir banco
 
@@ -266,7 +267,7 @@ App: Streamlit Cloud
 - Credenciais via st.secrets
 - App consome apenas views GOLD
 
-🔮 Próximos Passos
+## 🔮 Próximos Passos
 
 - Adicionar mais fontes de notícias
 - Testar outros modelos (XGBoost, LSTM)
