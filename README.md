@@ -215,6 +215,22 @@ b3-marketpulse/
 └── LICENSE (opcional)                # Licença do projeto
 ```
 
+## 🏆 Análise de Resultados
+
+<p align="center">
+  <img src="assets/backtest.png" width="800">
+</p>
+
+Análise de performance quantitativa consumindo a camada GOLD. O sistema ranqueia ativos por retorno acumulado e Sharpe Ratio.
+
+## 🧪 Validação da Hipótese
+
+<p align="center">
+  <img src="assets/model.png" width="800">
+</p>
+
+Teste de hipótese: Comparativo entre o modelo base e o modelo enriquecido com sentimento. Notável geração de alfa no ativo WEGE3 ao utilizar dados de NLP.
+
 🚀 Como Executar Localmente (Resumo)
 
 Subir banco
