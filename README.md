@@ -161,25 +161,11 @@ Cloud
 
 🧰 Stack Tecnológica
 
-Linguagens & Core
-Python
-SQL
-Data & ML
-Pandas
-NumPy
-Scikit-learn
-Transformers (NLP)
-PyTorch
-Banco & Infra
-PostgreSQL
-Docker
-Neon (Postgres Cloud)
-Visualização
-Streamlit
-Plotly
-Arquitetura
-Data Lakehouse (Bronze / Silver / Gold)
-Views SQL como camada semântica
+A stack tecnológica foi selecionada para suportar um pipeline end-to-end de alta performance. Utilizamos Transformers (via Hugging Face) para o processamento de linguagem natural das notícias e PyTorch para a base de modelagem, com persistência em PostgreSQL para garantir a integridade da arquitetura medalhão (Bronze/Silver/Gold).
+
+<p align="center">
+  <img src="assets/tech-stack.png" width="800">
+</p>
 
 ---
 
