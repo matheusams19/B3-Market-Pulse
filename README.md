@@ -8,6 +8,12 @@ Pipeline end-to-end de Data Science e Machine Learning aplicado ao mercado acion
 
 Construir um pipeline end-to-end de dados e Machine Learning aplicado ao mercado acionário brasileiro (B3), cobrindo desde ingestão, processamento, modelagem, backtesting e visualização, com foco em tomada de decisão quantitativa baseada em dados.
 
+Interface principal com monitoramento em tempo real de preços e volumes da B3, integrando dados via brAPI.
+
+<p align="center">
+  <img src="assets/home.png" width="800">
+</p>
+
 O projeto tem como objetivos centrais:
 
 - Modelar estratégias quantitativas de trading a partir de dados históricos de preços e indicadores técnicos
