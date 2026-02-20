@@ -36,6 +36,10 @@ Como extensão analítica do projeto, é incorporada uma camada de análise de s
 
 O projeto não parte da premissa de que o sentimento melhora resultados, mas sim testa essa hipótese de forma mensurável, reproduzível e orientada a dados.
 
+<p align="center">
+  <img src="assets/sent.png" width="800">
+</p>
+
 ---
 
 🧱 Arquitetura Geral (End-to-End)
