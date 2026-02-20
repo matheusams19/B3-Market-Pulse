@@ -226,10 +226,18 @@ Análise de performance quantitativa consumindo a camada GOLD. O sistema ranquei
 ## 🧪 Validação da Hipótese
 
 <p align="center">
-  <img src="assets/model.png" width="800">
+  <img src="assets/modelo.png" width="800">
 </p>
 
 Teste de hipótese: Comparativo entre o modelo base e o modelo enriquecido com sentimento. Notável geração de alfa no ativo WEGE3 ao utilizar dados de NLP.
+
+## 🧠 Inteligência de Mercado
+
+<p align="center">
+  <img src="assets/compare.png" width="800">
+</p>
+
+Mapa de Impacto: Visualização analítica que classifica os ativos onde o sentimento ajudou a reduzir o risco (drawdown) e aumentar a performance ajustada (Sharpe).
 
 🚀 Como Executar Localmente (Resumo)
 
