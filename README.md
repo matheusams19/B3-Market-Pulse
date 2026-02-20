@@ -34,56 +34,12 @@ O projeto não parte da premissa de que o sentimento melhora resultados, mas sim
 
 🧱 Arquitetura Geral (End-to-End)
 
-```text
-                 ┌──────────────────────────┐
-                 │          Fontes          │
-                 │───────────────────────── │
-                 │ • Preços B3              │
-                 │ • Notícias financeiras   │
-                 └─────────────┬────────────┘
-                               │
-                    (Ingestão / ETL)
-                               │
-┌────────────────────────────────────────────────────┐
-│                     BRONZE                         │
-│────────────────────────────────────────────────────│
-│ • prices_daily                                     │
-│ • sentiment_raw (RSS / notícias)                   │
-└─────────────┬──────────────────────────────────────┘
-              │
-       (Limpeza / Features)
-              │
-┌────────────────────────────────────────────────────┐
-│                     SILVER                         │
-│────────────────────────────────────────────────────│
-│ • features_daily                                   │
-│ • sentiment_daily                                  │
-│ • risk_scores                                      │
-└─────────────┬──────────────────────────────────────┘
-              │
-     (ML + Backtest + Agregações)
-              │
-┌────────────────────────────────────────────────────┐
-│                      GOLD                          │
-│────────────────────────────────────────────────────│
-│ • model_results                                    │
-│ • model_predictions                                │
-│ • gold_features (VIEW)                             │
-│ • gold_model_decision (VIEW)                       │
-│ • gold_trading_decision (VIEW)                     │
-└─────────────┬──────────────────────────────────────┘
-              │
-        (Consumo direto)
-              │
-┌────────────────────────────────────────────────────┐
-│                STREAMLIT APP                       │
-│────────────────────────────────────────────────────│
-│ • Comparação de Modelos                            │
-│ • Ranking por impacto                              │
-│ • Equity Curve (com vs sem sentimento)             │
-│ • Visualização risco-retorno                       │
-└────────────────────────────────────────────────────┘
-```
+O projeto segue uma arquitetura moderna de Data Lakehouse segmentada em camadas. O fluxo se inicia na coleta de dados brutos (Bronze), passa pelo enriquecimento e processamento de NLP via modelos de linguagem (Silver) e culmina em uma camada semântica em SQL (Gold), otimizada para o consumo do dashboard Streamlit.
+
+<p align="center">
+  <img src="assets/arq.png" width="800">
+</p>
+
 ---
 
 🧠 Modelagem e Machine Learning
