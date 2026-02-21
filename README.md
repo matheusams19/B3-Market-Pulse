@@ -5,6 +5,8 @@ O projeto está publicado e pode ser testado em tempo real através do link abai
 
 Abrir B3 MarketPulse no [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://b3-market-pulse.streamlit.app/)
 
+![Streamlit Cloud](https://img.shields.io/badge/Streamlit%20Cloud-Online-brightgreen?logo=streamlit)
+
 Pipeline end-to-end de Data Science e Machine Learning aplicado ao mercado acionário brasileiro (B3), integrando preços históricos, análise de sentimento de notícias via NLP, backtesting de estratégias quantitativas e visualização interativa em Streamlit, com arquitetura em camadas Bronze / Silver / Gold e banco PostgreSQL local e em cloud (Neon).
 
 
